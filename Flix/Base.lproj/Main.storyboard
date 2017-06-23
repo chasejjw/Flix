@@ -197,17 +197,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="81v-Jg-i1Q">
-                                    <size key="itemSize" width="182" height="271"/>
+                                    <size key="itemSize" width="182" height="272"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="com.chasejjw.PosterCell" id="88P-Vf-H3c" customClass="PosterCell" customModule="Flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="271"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="272"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="271"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="272"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIr-Tb-5Gq">
@@ -216,8 +216,10 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="posterView" destination="nIr-Tb-5Gq" id="Pja-IV-AhR"/>
+                                            <segue destination="K5r-qH-ihe" kind="show" id="gld-Iu-Vdq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -233,6 +235,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgc-he-VRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="852.3238380809596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u0p-fJ-GYW">
+            <objects>
+                <viewController id="K5r-qH-ihe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4uV-UF-soj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Evy-Ic-LLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVW-r6-Pdt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9p-hh-OKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="852"/>
         </scene>
         <!--Upcoming-->
         <scene sceneID="wE2-LN-YXz">
