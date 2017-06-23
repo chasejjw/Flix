@@ -26,7 +26,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: request) { (data, response, error) in
-            // This will run when the network request returns
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {

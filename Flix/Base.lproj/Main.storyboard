@@ -167,6 +167,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LlA-cC-Ink" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="2Hq-yL-btD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -179,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="146.40000000000001" y="141.67916041979012"/>
         </scene>
-        <!--View Controller-->
+        <!--Upcoming-->
         <scene sceneID="nbh-ky-uwA">
             <objects>
-                <viewController id="CA6-TV-XvJ" sceneMemberID="viewController">
+                <viewController id="CA6-TV-XvJ" customClass="CollectionViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ic0-q5-usJ"/>
                         <viewControllerLayoutGuide type="bottom" id="EL5-8S-tIN"/>
@@ -190,19 +191,54 @@
                     <view key="view" contentMode="scaleToFill" id="s16-sK-d8K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LmY-7R-J0j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="81v-Jg-i1Q">
+                                    <size key="itemSize" width="182" height="271"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="com.chasejjw.PosterCell" id="88P-Vf-H3c" customClass="PosterCell" customModule="Flix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="271"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIr-Tb-5Gq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="182" height="270"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="posterView" destination="nIr-Tb-5Gq" id="Pja-IV-AhR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MaL-5S-Gr9"/>
+                    <navigationItem key="navigationItem" title="Upcoming" id="MaL-5S-Gr9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LmY-7R-J0j" id="FTd-Yf-6ls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgc-he-VRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="852.3238380809596"/>
         </scene>
-        <!--All Movies-->
+        <!--Upcoming-->
         <scene sceneID="wE2-LN-YXz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dMe-cA-kqt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Movies" image="now_playing_tabbar_item" id="Bnn-s1-cM5"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="now_playing_tabbar_item" id="Bnn-s1-cM5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ubi-QJ-giC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
