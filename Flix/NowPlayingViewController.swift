@@ -40,9 +40,53 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         task.resume()
     }
     
+    func loadMoreData() {
+        tableView.dataSource = self
+        
+        let alertController = UIAlertController(title: "Unable to retreive movies", message: "The internet connection appears to be offline", preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { (action) in
+            self.activityIndicator.startAnimating()
+            self.loadMoreData()
+            self.activityIndicator.stopAnimating()
+        }
+        
+        alertController.addAction(retryAction)
+        
+        tableView.dataSource = self
+        
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if error != nil {
+                self.present(alertController, animated: true) {}
+            } else if let data = data {
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let movies = dataDictionary["results"] as! [[String: Any]]
+                self.movies = movies
+                self.tableView.reloadData()
+            }
+        }
+        
+        task.resume()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let alertController = UIAlertController(title: "Unable to retreive movies", message: "The internet connection appears to be offline", preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { (action) in
+            self.activityIndicator.startAnimating()
+            self.loadMoreData()
+            self.activityIndicator.stopAnimating()
+        }
+        
+        alertController.addAction(retryAction)
         
         self.activityIndicator.startAnimating()
     
@@ -60,8 +104,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             // This will run when the network request returns
-            if let error = error {
-                print(error.localizedDescription)
+            if error != nil {
+                self.present(alertController, animated: true) {}
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]

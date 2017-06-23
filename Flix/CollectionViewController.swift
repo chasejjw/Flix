@@ -30,9 +30,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let data = data {
+            if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
