@@ -42,6 +42,10 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/vJqvMHw.gif' title='Second Video Walkthrough' width='' alt='Second Video Walkthrough' />
 
+**Bad Network**
+
+<img src='http://i.imgur.com/9njm10M.gif' title='Third Video Walkthrough' width='' alt='Third Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
