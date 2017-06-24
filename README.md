@@ -34,7 +34,11 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+**Required**
+
 <img src='http://i.imgur.com/vZNPXBc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+**Optional**
 
 <img src='http://i.imgur.com/E1FEYAP.gif' title='Second Video Walkthrough' width='' alt='Second Video Walkthrough' />
 
