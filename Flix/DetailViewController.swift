@@ -35,6 +35,11 @@ class DetailViewController: UIViewController {
             posterImageView.af_setImage(withURL: posterURL)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let posterViewController = segue.destination as! PosterViewController
+        posterViewController.movie = movie
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
