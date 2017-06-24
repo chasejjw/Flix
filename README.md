@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 - [X] User can view the large movie poster by tapping on a smaller poster.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - [X] Customize the selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [X] Customize the navigation bar.
 - [X] Customize the UI.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -38,9 +38,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/vZNPXBc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-**Optional**
+**Optionals**
 
-<img src='http://i.imgur.com/E1FEYAP.gif' title='Second Video Walkthrough' width='' alt='Second Video Walkthrough' />
+<img src='http://i.imgur.com/f8mKMxc.gif' title='Second Video Walkthrough' width='' alt='Second Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
